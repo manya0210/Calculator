@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="/style.css/dark.css" id="theme">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header-container">
+                <h1 id="head">Calculator</h1>
+                <div class="header-button">
+                    <button type="button" onclick="changeTheme()" class="theme-button">
+                        <img src="sunIcon.png" alt="Theme Icon" height="19" width="19" id="theme-icon">
+                      </button>  
+                </div>
+            </div>
+
+            <div class="firstRow rows">
+                <input type="text" name="result" id="result" placeholder="Result" />
+                <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+            </div>
+
+            <div class="secondRow rows">
+                <input type="button" value="1" onclick="screen(1)"/>
+                <input type="button" value="2" onclick="screen(2)"/>
+                <input type="button" value="3" onclick="screen(3)"/>
+                <input type="button" value="+" onclick="screen('+')"/>
+            </div>
+
+            <div class="thirdRow rows">
+                <input type="button" value="4" onclick="screen(4)"/>
+                <input type="button" value="5" onclick="screen(5)"/>
+                <input type="button" value="6" onclick="screen(6)"/>
+                <input type="button" value="-" onclick="screen('-')"/>
+            </div>
+
+            <div class="fourthRow rows">
+                <input type="button" value="7" onclick="screen(7)"/>
+                <input type="button" value="8" onclick="screen(8)"/>
+                <input type="button" value="9" onclick="screen(9)"/>
+                <input type="button" value="x" onclick="screen('*')"/>
+            </div>
+
+            <div class="fifth-row rows">
+                <input type="button" value="/" onclick="screen('/')"/>
+                <input type="button" value="0" onclick="screen(0)"/>
+                <input type="button" value="." onclick="screen('.')"/>
+                <input type="button" value="=" onclick="calculate(result.value)"/>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
